@@ -13,67 +13,125 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #faf7f0;
-      --ink: #1a1a1a;
-      --muted: #6b6b6b;
-      --rule: #d8d3c6;
-      --accent: #8b2635;
-      --accent-hover: #6b1b27;
+      --bg:           #faf7f0;
+      --ink:          #1a1a1a;
+      --muted:        #6b6b6b;
+      --faint:        #aaa;
+      --rule:         #d8d3c6;
+      --accent:       #8b2635;
+      --accent-faint: rgba(139, 38, 53, 0.055);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { font-size: 18px; -webkit-font-smoothing: antialiased; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html  { font-size: 18px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
 
     body {
-      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      font-family: 'EB Garamond', Georgia, serif;
       background: var(--bg);
       color: var(--ink);
-      line-height: 1.55;
-      padding: 4.5rem 1.5rem 6rem;
+      line-height: 1.6;
+      padding: 5rem 1.5rem 6rem;
       font-feature-settings: "liga", "onum", "kern";
+    }
+
+    /* ── Top accent bar ── */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 2.5px;
+      background: var(--accent);
+      z-index: 100;
+    }
+
+    /* ── Fixed monogram ── */
+    .monogram {
+      position: fixed;
+      top: 0.9rem;
+      right: 1.5rem;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      opacity: 0;
+      animation: fadeIn 0.4s 0.7s ease forwards;
+      z-index: 50;
     }
 
     main { max-width: 720px; margin: 0 auto; }
 
-    /* ---- Header ---- */
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    .header { animation: fadeUp 0.55s 0.05s ease both; }
+    .s1     { animation: fadeUp 0.50s 0.15s ease both; }
+    .s2     { animation: fadeUp 0.50s 0.22s ease both; }
+    .s3     { animation: fadeUp 0.50s 0.29s ease both; }
+    .s4     { animation: fadeUp 0.50s 0.36s ease both; }
+    .s5     { animation: fadeUp 0.50s 0.43s ease both; }
+    .s6     { animation: fadeUp 0.50s 0.50s ease both; }
+    footer  { animation: fadeUp 0.50s 0.57s ease both; }
+
+    /* ── Header ── */
     .header {
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 2.2rem;
       align-items: start;
-      margin-bottom: 3rem;
+      margin-bottom: 3.2rem;
     }
 
+    /* Photo: offset shadow, lifts on hover */
     .photo {
       width: 160px;
       height: 200px;
-      border: 1px dashed var(--rule);
-      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid var(--rule);
+      background: rgba(255,255,255,0.4);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--muted);
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
-      font-size: 0.7rem;
+      color: var(--faint);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       flex-shrink: 0;
+      box-shadow: 5px 5px 0 var(--rule);
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
     }
-    /* When the photo is ready, replace the .photo div with:
-       <img src="photo.jpg" alt="Hemant Pathak" class="photo-img"> */
+    .photo:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0 var(--rule);
+    }
+    /* When adding photo, replace div.photo with: <img src="photo.png" alt="Hemant Pathak" class="photo-img"> */
     .photo-img {
       width: 160px;
       height: 200px;
       object-fit: cover;
-      filter: grayscale(15%) contrast(1.02);
+      object-position: center top;
       flex-shrink: 0;
+      border: 1px solid var(--rule);
+      box-shadow: 5px 5px 0 var(--rule);
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+      display: block;
+    }
+    .photo-img:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0 var(--rule);
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       font-weight: 500;
-      letter-spacing: -0.015em;
+      letter-spacing: -0.02em;
       line-height: 1.05;
       margin-bottom: 0.5rem;
     }
@@ -82,60 +140,87 @@
       font-style: italic;
       color: var(--muted);
       font-size: 1.05rem;
-      line-height: 1.4;
-      margin-bottom: 1.1rem;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
     }
 
+    /* Contact: boxed buttons */
     .contact {
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
-      font-size: 0.76rem;
-      letter-spacing: 0.02em;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      letter-spacing: 0.03em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
     }
-
     .contact a {
-      color: var(--ink);
+      color: var(--muted);
       text-decoration: none;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 1px;
-      margin-right: 0.95rem;
-      transition: border-color 0.15s ease, color 0.15s ease;
+      padding: 0.22rem 0.7rem;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
     }
-
     .contact a:hover {
       color: var(--accent);
-      border-bottom-color: var(--accent);
+      border-color: var(--accent);
+      background: var(--accent-faint);
     }
 
-    /* ---- Sections ---- */
-    section { margin-top: 2.6rem; }
+    /* ── Sections ── */
+    section { margin-top: 2.8rem; }
 
     h2 {
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
-      font-size: 0.76rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
       font-weight: 500;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 1.1rem;
-      padding-bottom: 0.55rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
       border-bottom: 1px solid var(--rule);
     }
 
     p { margin-bottom: 1rem; font-size: 1.05rem; }
     p:last-child { margin-bottom: 0; }
+    em { font-style: italic; color: #2d2d2d; }
 
-    em { color: #2d2d2d; }
+    a.link { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+    a.link:hover { color: #6b1b27; }
 
-    a.link {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid currentColor;
+    /* ── Interest tags: outlined chips ── */
+    .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.71rem;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      border: 1px solid var(--rule);
+      padding: 0.2rem 0.65rem;
+      border-radius: 2px;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+      cursor: default;
     }
-    a.link:hover { color: var(--accent-hover); }
+    .tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-faint);
+    }
 
-    /* ---- Item lists ---- */
-    .item { margin-bottom: 1.5rem; }
-    .item:last-child { margin-bottom: 0; }
+    /* ── Experience items: left-border hover reveal ── */
+    .items-wrap { margin-left: -1rem; }
+    .item {
+      padding: 1rem 0.9rem 1rem 1rem;
+      border-left: 2px solid transparent;
+      border-radius: 0 3px 3px 0;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .item + .item { border-top: 1px solid var(--rule); }
+    .item:hover {
+      border-left-color: var(--accent);
+      background: var(--accent-faint);
+    }
 
     .item-head {
       display: flex;
@@ -145,176 +230,209 @@
       margin-bottom: 0.15rem;
       flex-wrap: wrap;
     }
-
     .item-title { font-weight: 500; font-size: 1.1rem; }
-
     .item-time {
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
-      font-size: 0.72rem;
-      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--faint);
       letter-spacing: 0.04em;
       white-space: nowrap;
     }
-
     .item-role {
       font-style: italic;
       color: var(--muted);
-      font-size: 0.98rem;
-      margin-bottom: 0.45rem;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
     }
+    .item p { font-size: 0.98rem; line-height: 1.55; }
 
-    .item p { font-size: 1rem; line-height: 1.55; }
-
-    /* ---- Interest tags ---- */
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem 1.4rem;
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
-      font-size: 0.78rem;
-      color: #404040;
-      letter-spacing: 0.01em;
+    /* ── Achievement items: left bar ── */
+    .achievement {
+      padding: 0.8rem 0.9rem 0.8rem 1.2rem;
+      border-left: 2px solid var(--rule);
+      margin-bottom: 0.6rem;
+      transition: border-color 0.2s;
     }
+    .achievement:last-child { margin-bottom: 0; }
+    .achievement:hover { border-left-color: var(--accent); }
+    .achievement p { font-size: 1rem; }
 
-    .tags span::before {
-      content: "— ";
-      color: var(--rule);
-      margin-right: 0.15rem;
+    /* ── Skills: two-column grid ── */
+    .skills-grid { display: grid; gap: 0.55rem; }
+    .skill-row {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 1rem;
+      align-items: baseline;
+      line-height: 1.7;
     }
-
-    /* ---- Skills block ---- */
-    .skills { font-size: 0.98rem; line-height: 1.85; }
-    .skills .label {
-      font-variant: small-caps;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      margin-right: 0.4rem;
+    .skill-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      padding-top: 0.1rem;
     }
+    .skill-val { font-size: 0.97rem; color: var(--ink); }
 
-    /* ---- Footer ---- */
+    /* ── Footer ── */
     footer {
-      margin-top: 4rem;
+      margin-top: 4.5rem;
       padding-top: 1.5rem;
       border-top: 1px solid var(--rule);
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
-      font-size: 0.7rem;
-      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--faint);
       letter-spacing: 0.04em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+    footer a {
+      color: var(--faint);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: color 0.15s, border-color 0.15s;
+    }
+    footer a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
-    /* ---- Responsive ---- */
+    /* ── Responsive ── */
     @media (max-width: 600px) {
-      body { padding: 2.5rem 1.25rem 4rem; }
+      body { padding: 3rem 1.25rem 4rem; }
       .header { grid-template-columns: 1fr; gap: 1.4rem; }
       .photo, .photo-img { width: 140px; height: 175px; }
       h1 { font-size: 2rem; }
       .item-head { flex-direction: column; gap: 0.1rem; }
-      .contact a { display: inline-block; margin-bottom: 0.4rem; }
+      .skill-row { grid-template-columns: 90px 1fr; }
+      footer { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+      .monogram { display: none; }
     }
   </style>
 </head>
 <body>
+
+  <span class="monogram">hp</span>
+
   <main>
 
     <header class="header">
-      <!-- Replace this div with: <img src="photo.jpg" alt="Hemant Pathak" class="photo-img"> -->
+      <!-- Replace this div with: <img src="photo.png" alt="Hemant Pathak" class="photo-img"> -->
       <img src="photo.jpg" alt="Hemant Pathak" class="photo-img">
       <div>
         <h1>Hemant Pathak</h1>
-        <p class="affiliation">Integrated M.Tech, Mathematics &amp; Computing<br>
-          Indian Institute of Technology (ISM) Dhanbad</p>
-        <div class="contact">
+        <p class="affiliation">
+          Integrated M.Tech, Mathematics &amp; Computing<br>
+          Indian Institute of Technology (ISM) Dhanbad
+        </p>
+        <nav class="contact">
           <a href="mailto:Hemantpathak1411@gmail.com">email</a>
           <a href="https://github.com/HEMANT2027" target="_blank" rel="noopener">github</a>
+          <a href="https://github.com/HEMANT2027?tab=achievements" target="_blank" rel="noopener">achievements</a>
           <a href="https://www.linkedin.com/in/hemant-pathak1411" target="_blank" rel="noopener">linkedin</a>
-          <a href="resume.pdf" target="_blank" rel="noopener">cv</a>
-        </div>
+          <a href="https://www.quora.com/profile/Hemant-Pathak-123" target="_blank" rel="noopener" title="Thoughts on life">quora</a>
+          <a href="resume.pdf" target="_blank" rel="noopener">cv ↗</a>
+        </nav>
       </div>
     </header>
 
-    <section>
+    <section class="s1">
       <h2>About</h2>
       <p>Welcome to my corner of GitHub. I'm a student pursuing an Integrated M.Tech in Mathematics and Computing at IIT (ISM) Dhanbad. My interests sit at the crux of <em>AI, data, and creative problem-solving</em> — particularly agentic systems, retrieval pipelines, and applied computer vision.</p>
     </section>
 
-    <section>
+    <section class="s2">
       <h2>Research &amp; Interests</h2>
       <div class="tags">
-        <span>Agentic LLM systems</span>
-        <span>Retrieval-Augmented Generation</span>
-        <span>Prompt orchestration</span>
-        <span>Computer Vision &amp; OCR</span>
-        <span>Geospatial ML</span>
-        <span>Statistical arbitrage</span>
+        <span class="tag">Agentic LLM systems</span>
+        <span class="tag">Retrieval-Augmented Generation</span>
+        <span class="tag">Prompt orchestration</span>
+        <span class="tag">Computer Vision &amp; OCR</span>
+        <span class="tag">Geospatial ML</span>
+        <span class="tag">Statistical arbitrage</span>
       </div>
     </section>
 
-    <section>
+    <section class="s3">
       <h2>Experience</h2>
+      <div class="items-wrap">
 
-      <div class="item">
-        <div class="item-head">
-          <span class="item-title">Apparent Energy Solutions</span>
-          <span class="item-time">Apr 2026 — Present</span>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Apparent Energy Solutions</span>
+            <span class="item-time">Apr 2026 — Present</span>
+          </div>
+          <p class="item-role">AI Engineering Intern · Agentic MCP &amp; Retrieval Systems</p>
+          <p>Designed a FastMCP server exposing 16+ tool-based APIs for Claude Desktop, cutting token overhead by ~40% via one-shot query bundling. Built schema-aware retrieval with hierarchical tool orchestration; eliminated SQL hallucinations through deterministic tool-invocation paths. Validated with a 48-case parametric test suite.</p>
         </div>
-        <p class="item-role">AI Engineering Intern · Agentic MCP &amp; Retrieval Systems</p>
-        <p>Designed a FastMCP server exposing 16+ tool-based APIs for Claude Desktop, cutting token overhead by ~40% via one-shot query bundling. Built schema-aware retrieval with hierarchical tool orchestration; eliminated SQL hallucinations through deterministic tool-invocation paths. Validated with a 48-case parametric test suite.</p>
-      </div>
 
-      <div class="item">
-        <div class="item-head">
-          <span class="item-title">Apparent Energy Solutions</span>
-          <span class="item-time">Jan — Mar 2026</span>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Apparent Energy Solutions</span>
+            <span class="item-time">Jan — Mar 2026</span>
+          </div>
+          <p class="item-role">Lead SWE Intern · AI &amp; Computer Vision</p>
+          <p>Orchestrated CV pipelines on Google Street View and multi-spectral satellite imagery to map India's electrical grid. Trained YOLOv11 (TensorRT) with hybrid instance segmentation; modeled pole-to-pole topology with GeoPandas + PostGIS to build a digital twin of the grid.</p>
         </div>
-        <p class="item-role">Lead SWE Intern · AI &amp; Computer Vision</p>
-        <p>Orchestrated CV pipelines on Google Street View and multi-spectral satellite imagery to map India's electrical grid. Trained a custom YOLOv11 (TensorRT) for pole detection with hybrid instance segmentation; modeled pole-to-pole topology with GeoPandas + PostGIS to build a digital twin of the grid.</p>
-      </div>
 
-      <div class="item">
-        <div class="item-head">
-          <span class="item-title">Aeroqube Inc.</span>
-          <span class="item-time">Aug — Dec 2025</span>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Aeroqube Inc.</span>
+            <span class="item-time">Aug — Dec 2025</span>
+          </div>
+          <p class="item-role">SWE Intern (AI)</p>
+          <p>Built multimodal reasoning agents with LangChain / LangGraph and Med Gemma 27B over a FAISS-backed i-MedRAG pipeline. Fine-tuned MED-SAM 2 for zero-shot lesion segmentation, achieving &gt;90% Dice on held-out CT/X-ray sets. Deployed on AWS SageMaker with Docker + model quantization.</p>
         </div>
-        <p class="item-role">SWE Intern (AI)</p>
-        <p>Built multimodal reasoning agents with LangChain / LangGraph and Med Gemma 27B over a FAISS-backed i-MedRAG pipeline. Fine-tuned MED-SAM 2 for zero-shot lesion segmentation, achieving &gt;90% Dice on held-out CT/X-ray sets. Containerized inference on AWS SageMaker with Docker + model quantization.</p>
-      </div>
 
-      <div class="item">
-        <div class="item-head">
-          <span class="item-title">Technod8.ai</span>
-          <span class="item-time">Jul 2025</span>
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Technod8.ai</span>
+            <span class="item-time">Jul 2025</span>
+          </div>
+          <p class="item-role">Generative AI Intern</p>
+          <p>Fine-tuned YOLOv10 for Document Layout Analysis on multilingual corpora (NCIIPC AI Grand Challenge); class-balanced augmentation to maximize mAP, integrated with PaddleOCR for downstream semantic parsing.</p>
         </div>
-        <p class="item-role">Generative AI Intern</p>
-        <p>Fine-tuned YOLOv10 for Document Layout Analysis on multilingual corpora (NCIIPC AI Grand Challenge); class-balanced augmentation to maximize mAP, integrated with PaddleOCR for downstream semantic parsing.</p>
+
       </div>
     </section>
 
-    <section>
+    <section class="s4">
       <h2>Selected Achievements</h2>
-      <div class="item">
-        <p><strong>Top 1% &nbsp;&middot;&nbsp; Rank 80 / 8,000+</strong> &nbsp;— Shell.ai Blend Fuel Price Prediction Challenge 2025. Production-grade ML pipeline with rigorous feature selection and benchmarking across Scikit-Learn and TensorFlow.</p>
+      <div class="achievement">
+        <p><strong>Top 1% &nbsp;·&nbsp; Rank 80 / 8,000+</strong> &nbsp;— Shell.ai Blend Fuel Price Prediction Challenge 2025. Production-grade ML pipeline with rigorous feature selection across Scikit-Learn &amp; TensorFlow.</p>
       </div>
-      <div class="item">
+      <div class="achievement">
         <p><strong>Runner-up</strong> &nbsp;— Algoverse algorithmic trading hackathon. Statistical arbitrage strategy outperformed 50+ teams.</p>
       </div>
     </section>
 
-    <section>
-      <h2>Selected Skills</h2>
-      <p class="skills">
-        <span class="label">Languages</span> Python (async, typed) · C++ · Java · JavaScript · SQL<br>
-        <span class="label">ML / AI</span> PyTorch · TensorFlow · LangChain · LangGraph · FAISS · OpenCV · FastAPI<br>
-        <span class="label">Cloud &amp; Infra</span> Azure (incl. Doc Intelligence) · AWS SageMaker · Docker · GitHub Actions · GCP
-      </p>
+    <section class="s5">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-label">Languages</span>
+          <span class="skill-val">Python (async, typed) · C++ · Java · JavaScript · SQL</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">ML / AI</span>
+          <span class="skill-val">PyTorch · TensorFlow · LangChain · LangGraph · FAISS · OpenCV · FastAPI</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Cloud &amp; Infra</span>
+          <span class="skill-val">Azure (Doc Intelligence) · AWS SageMaker · Docker · GitHub Actions · GCP</span>
+        </div>
+      </div>
     </section>
 
-    <section>
+    <section class="s6">
       <h2>Positions</h2>
-      <p style="font-size: 1rem;">Student Placement Coordinator, Career Development Centre &nbsp;·&nbsp; Member, Fintech Club &nbsp;—&nbsp; IIT (ISM) Dhanbad</p>
+      <p style="font-size:1rem;">Student Placement Coordinator, Career Development Centre &nbsp;·&nbsp; Member, Fintech Club &mdash; IIT (ISM) Dhanbad</p>
     </section>
 
     <footer>
-      <p>last updated 2026 &nbsp;&middot;&nbsp; html, hosted on github pages</p>
+      <span>Hemant Pathak &nbsp;·&nbsp; IIT (ISM) Dhanbad &nbsp;·&nbsp; 2026</span>
+      <a href="mailto:Hemantpathak1411@gmail.com">get in touch</a>
     </footer>
 
   </main>
