@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hemant Pathak — Integrated M.Tech, Mathematics and Computing, IIT (ISM) Dhanbad. Agentic AI, retrieval systems, computer vision.">
+  <meta property="og:title" content="Hemant Pathak">
+  <meta property="og:description" content="Mathematics & Computing @ IIT (ISM) Dhanbad. Agentic AI · RAG · Computer Vision.">
+  <meta property="og:type" content="website">
+  <title>Hemant Pathak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf7f0;
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --rule: #d8d3c6;
+      --accent: #8b2635;
+      --accent-hover: #6b1b27;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 18px; -webkit-font-smoothing: antialiased; }
+
+    body {
+      font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+      padding: 4.5rem 1.5rem 6rem;
+      font-feature-settings: "liga", "onum", "kern";
+    }
+
+    main { max-width: 720px; margin: 0 auto; }
+
+    /* ---- Header ---- */
+    .header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2.2rem;
+      align-items: start;
+      margin-bottom: 3rem;
+    }
+
+    .photo {
+      width: 160px;
+      height: 200px;
+      border: 1px dashed var(--rule);
+      background: rgba(255, 255, 255, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    /* When the photo is ready, replace the .photo div with:
+       <img src="photo.jpg" alt="Hemant Pathak" class="photo-img"> */
+    .photo-img {
+      width: 160px;
+      height: 200px;
+      object-fit: cover;
+      filter: grayscale(15%) contrast(1.02);
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      line-height: 1.05;
+      margin-bottom: 0.5rem;
+    }
+
+    .affiliation {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.4;
+      margin-bottom: 1.1rem;
+    }
+
+    .contact {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.76rem;
+      letter-spacing: 0.02em;
+    }
+
+    .contact a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px;
+      margin-right: 0.95rem;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .contact a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ---- Sections ---- */
+    section { margin-top: 2.6rem; }
+
+    h2 {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    p { margin-bottom: 1rem; font-size: 1.05rem; }
+    p:last-child { margin-bottom: 0; }
+
+    em { color: #2d2d2d; }
+
+    a.link {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+    a.link:hover { color: var(--accent-hover); }
+
+    /* ---- Item lists ---- */
+    .item { margin-bottom: 1.5rem; }
+    .item:last-child { margin-bottom: 0; }
+
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.15rem;
+      flex-wrap: wrap;
+    }
+
+    .item-title { font-weight: 500; font-size: 1.1rem; }
+
+    .item-time {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .item-role {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .item p { font-size: 1rem; line-height: 1.55; }
+
+    /* ---- Interest tags ---- */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.4rem;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.78rem;
+      color: #404040;
+      letter-spacing: 0.01em;
+    }
+
+    .tags span::before {
+      content: "— ";
+      color: var(--rule);
+      margin-right: 0.15rem;
+    }
+
+    /* ---- Skills block ---- */
+    .skills { font-size: 0.98rem; line-height: 1.85; }
+    .skills .label {
+      font-variant: small-caps;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+      margin-right: 0.4rem;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+      body { padding: 2.5rem 1.25rem 4rem; }
+      .header { grid-template-columns: 1fr; gap: 1.4rem; }
+      .photo, .photo-img { width: 140px; height: 175px; }
+      h1 { font-size: 2rem; }
+      .item-head { flex-direction: column; gap: 0.1rem; }
+      .contact a { display: inline-block; margin-bottom: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <header class="header">
+      <!-- Replace this div with: <img src="photo.jpg" alt="Hemant Pathak" class="photo-img"> -->
+      <div class="photo">photo</div>
+      <div>
+        <h1>Hemant Pathak</h1>
+        <p class="affiliation">Integrated M.Tech, Mathematics &amp; Computing<br>
+          Indian Institute of Technology (ISM) Dhanbad</p>
+        <div class="contact">
+          <a href="mailto:Hemantpathak1411@gmail.com">email</a>
+          <a href="https://github.com/HEMANT2027" target="_blank" rel="noopener">github</a>
+          <a href="https://www.linkedin.com/in/hemant-pathak1411" target="_blank" rel="noopener">linkedin</a>
+          <a href="resume.pdf" target="_blank" rel="noopener">cv</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>Welcome to my corner of GitHub. I'm a student pursuing an Integrated M.Tech in Mathematics and Computing at IIT (ISM) Dhanbad. My interests sit at the crux of <em>AI, data, and creative problem-solving</em> — particularly agentic systems, retrieval pipelines, and applied computer vision.</p>
+    </section>
+
+    <section>
+      <h2>Research &amp; Interests</h2>
+      <div class="tags">
+        <span>Agentic LLM systems</span>
+        <span>Retrieval-Augmented Generation</span>
+        <span>Prompt orchestration</span>
+        <span>Computer Vision &amp; OCR</span>
+        <span>Geospatial ML</span>
+        <span>Statistical arbitrage</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">Apparent Energy Solutions</span>
+          <span class="item-time">Apr 2026 — Present</span>
+        </div>
+        <p class="item-role">AI Engineering Intern · Agentic MCP &amp; Retrieval Systems</p>
+        <p>Designed a FastMCP server exposing 16+ tool-based APIs for Claude Desktop, cutting token overhead by ~40% via one-shot query bundling. Built schema-aware retrieval with hierarchical tool orchestration; eliminated SQL hallucinations through deterministic tool-invocation paths. Validated with a 48-case parametric test suite.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">Apparent Energy Solutions</span>
+          <span class="item-time">Jan — Mar 2026</span>
+        </div>
+        <p class="item-role">Lead SWE Intern · AI &amp; Computer Vision</p>
+        <p>Orchestrated CV pipelines on Google Street View and multi-spectral satellite imagery to map India's electrical grid. Trained a custom YOLOv11 (TensorRT) for pole detection with hybrid instance segmentation; modeled pole-to-pole topology with GeoPandas + PostGIS to build a digital twin of the grid.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">Aeroqube Inc.</span>
+          <span class="item-time">Aug — Dec 2025</span>
+        </div>
+        <p class="item-role">SWE Intern (AI)</p>
+        <p>Built multimodal reasoning agents with LangChain / LangGraph and Med Gemma 27B over a FAISS-backed i-MedRAG pipeline. Fine-tuned MED-SAM 2 for zero-shot lesion segmentation, achieving &gt;90% Dice on held-out CT/X-ray sets. Containerized inference on AWS SageMaker with Docker + model quantization.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head">
+          <span class="item-title">Technod8.ai</span>
+          <span class="item-time">Jul 2025</span>
+        </div>
+        <p class="item-role">Generative AI Intern</p>
+        <p>Fine-tuned YOLOv10 for Document Layout Analysis on multilingual corpora (NCIIPC AI Grand Challenge); class-balanced augmentation to maximize mAP, integrated with PaddleOCR for downstream semantic parsing.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Achievements</h2>
+      <div class="item">
+        <p><strong>Top 1% &nbsp;&middot;&nbsp; Rank 80 / 8,000+</strong> &nbsp;— Shell.ai Blend Fuel Price Prediction Challenge 2025. Production-grade ML pipeline with rigorous feature selection and benchmarking across Scikit-Learn and TensorFlow.</p>
+      </div>
+      <div class="item">
+        <p><strong>Runner-up</strong> &nbsp;— Algoverse algorithmic trading hackathon. Statistical arbitrage strategy outperformed 50+ teams.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Skills</h2>
+      <p class="skills">
+        <span class="label">Languages</span> Python (async, typed) · C++ · Java · JavaScript · SQL<br>
+        <span class="label">ML / AI</span> PyTorch · TensorFlow · LangChain · LangGraph · FAISS · OpenCV · FastAPI<br>
+        <span class="label">Cloud &amp; Infra</span> Azure (incl. Doc Intelligence) · AWS SageMaker · Docker · GitHub Actions · GCP
+      </p>
+    </section>
+
+    <section>
+      <h2>Positions</h2>
+      <p style="font-size: 1rem;">Student Placement Coordinator, Career Development Centre &nbsp;·&nbsp; Member, Fintech Club &nbsp;—&nbsp; IIT (ISM) Dhanbad</p>
+    </section>
+
+    <footer>
+      <p>last updated 2026 &nbsp;&middot;&nbsp; html, hosted on github pages</p>
+    </footer>
+
+  </main>
+</body>
+</html>
