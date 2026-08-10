@@ -21,6 +21,7 @@
       --faint:   #aaaaaa;
       --rule:    #d8d3c6;
       --accent:  #8b2635;
+      --wash:    rgba(139, 38, 53, 0.05);
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -30,6 +31,7 @@
         --faint:  #6f6d68;
         --rule:   #2c2e33;
         --accent: #d99098;
+        --wash:   rgba(217, 144, 152, 0.07);
       }
     }
 
@@ -54,15 +56,55 @@
     }
 
     /* ~68 characters — the measure a paper column uses. */
-    main { max-width: 41rem; margin: 0 auto; }
+    main {
+      max-width: 41rem;
+      margin: 0 auto;
+      animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* Sections settle in as you scroll to them. Falls back to fully
+       visible in browsers without scroll-driven animation support. */
+    @supports (animation-timeline: view()) {
+      section, footer {
+        animation: settle linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 55%;
+      }
+      @keyframes settle {
+        from { opacity: 0; transform: translateY(14px); }
+        to   { opacity: 1; transform: none; }
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
 
     p { margin-bottom: 0.95rem; text-wrap: pretty; }
     p:last-child { margin-bottom: 0; }
     em { font-style: italic; }
     strong { font-weight: 600; }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+    /* Underline wipes in from the left instead of snapping on. */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      background-size: 0% 1px;
+      transition: background-size 0.28s cubic-bezier(0.4, 0, 0.2, 1), color 0.18s ease;
+      padding-bottom: 0.12em;
+    }
+    a:hover, a:focus-visible { background-size: 100% 1px; }
     a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
     /* ── Header ── */
@@ -81,7 +123,10 @@
       object-position: center top;
       border: 1px solid var(--rule);
       display: block;
+      filter: saturate(0.92);
+      transition: filter 0.4s ease, border-color 0.4s ease;
     }
+    .photo-img:hover { filter: saturate(1); border-color: var(--accent); }
 
     h1 {
       font-size: 2.15rem;
@@ -125,9 +170,15 @@
     .interests { color: var(--ink); }
 
     /* ── Experience ── */
-    .item { padding: 1.05rem 0; }
+    .items-wrap { margin-left: -1.1rem; }
+    .item {
+      padding: 1.05rem 0 1.05rem 1.1rem;
+      border-left: 2px solid transparent;
+      transition: border-left-color 0.25s ease, background-color 0.25s ease;
+    }
     .item:first-child { padding-top: 0.15rem; }
     .item + .item { border-top: 1px solid var(--rule); }
+    .item:hover { border-left-color: var(--accent); background-color: var(--wash); }
 
     .item-head {
       display: flex;
@@ -242,6 +293,8 @@
     <section>
       <h2>Experience</h2>
 
+      <div class="items-wrap">
+
       <div class="item">
         <div class="item-head">
           <span class="item-title">Apparent Energy Solutions</span>
@@ -278,6 +331,7 @@
         <p>Fine-tuned YOLOv10 for Document Layout Analysis on multilingual corpora (NCIIPC AI Grand Challenge); class-balanced augmentation to maximize mAP, integrated with PaddleOCR for downstream semantic parsing.</p>
       </div>
 
+      </div>
     </section>
 
     <section>
