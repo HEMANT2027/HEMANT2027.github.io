@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Work Experience"
+title: "Education & Experience"
 permalink: /experience/
 author_profile: true
 redirect_from:
@@ -16,20 +16,20 @@ redirect_from:
   align-items: flex-start;
   gap: 20px;
   padding: 20px 0;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e5e7eb;
 }
 .experience-logo-box {
   width: 72px;
   height: 72px;
   min-width: 72px;
   border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e5e7eb;
   background-color: #ffffff;
   padding: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 .experience-logo-box img {
   max-width: 100%;
@@ -43,33 +43,34 @@ redirect_from:
   margin: 0 0 4px 0;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #1a202c;
+  color: #1f2937;
 }
 .experience-company {
   font-weight: 600;
-  color: #2b6cb0;
+  color: #1a73e8;
   margin-bottom: 6px;
   font-size: 1rem;
 }
 .experience-meta {
   font-size: 0.85rem;
-  color: #718096;
+  color: #6b7280;
   margin-bottom: 10px;
 }
 .experience-badge {
   display: inline-block;
-  background-color: #edf2f7;
-  color: #2b6cb0;
-  font-size: 0.75rem;
+  background-color: #eff6ff;
+  color: #1a73e8;
+  font-size: 0.78rem;
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 4px;
   margin-right: 8px;
+  border: 1px solid #dbeafe;
 }
 .experience-bullets {
   margin: 8px 0 0 16px;
   padding: 0;
-  color: #4a5568;
+  color: #374151;
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -84,9 +85,35 @@ redirect_from:
 }
 </style>
 
-Detailed track record of software engineering and machine learning internships across energy infrastructure, healthcare AI, and computer vision startups.
+## 🎓 Education
+
+<div class="experience-list">
+
+  <!-- Education: IIT ISM Dhanbad -->
+  <div class="experience-item">
+    <div class="experience-logo-box">
+      <img src="{{ base_path }}/images/ism_logo.png" alt="IIT ISM Dhanbad Logo" />
+    </div>
+    <div class="experience-content">
+      <h3 class="experience-title">Integrated Master of Technology (M.Tech) in Mathematics & Computing</h3>
+      <div class="experience-company">Indian Institute of Technology (ISM), Dhanbad</div>
+      <div class="experience-meta">
+        <span class="experience-badge">2023 – Expected May 2028</span>
+        <span>📍 Dhanbad, Jharkhand, India</span>
+      </div>
+      <ul class="experience-bullets">
+        <li><strong>Academic Standing:</strong> Current Cumulative GPA: <strong>8.80 / 10.00</strong>.</li>
+        <li><strong>Core Focus:</strong> Rigorous curriculum spanning theoretical mathematics (Linear Algebra, Statistical Inference, Probability Theory) combined with core computer science (Data Structures, Algorithms, GPU Computing, OS, DBMS).</li>
+        <li><strong>Leadership Roles:</strong> Student Placement Coordinator at Career Development Centre (CDC); Member of Fintech Club.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
 
 ---
+
+## 💼 Work Experience & Internships
 
 <div class="experience-list">
 
@@ -151,25 +178,4 @@ Detailed track record of software engineering and machine learning internships a
     </div>
   </div>
 
-  <!-- Education: IIT ISM Dhanbad -->
-  <div class="experience-item">
-    <div class="experience-logo-box">
-      <img src="{{ base_path }}/images/ism_logo.png" alt="IIT ISM Dhanbad Logo" />
-    </div>
-    <div class="experience-content">
-      <h3 class="experience-title">Integrated Master of Technology (M.Tech) in Mathematics & Computing</h3>
-      <div class="experience-company">Indian Institute of Technology (ISM), Dhanbad</div>
-      <div class="experience-meta">
-        <span class="experience-badge">2023 – Expected May 2028</span>
-        <span>📍 Dhanbad, Jharkhand, India</span>
-      </div>
-      <ul class="experience-bullets">
-        <li><strong>Academic Standing:</strong> Current Cumulative GPA: <strong>8.80 / 10.00</strong>.</li>
-        <li><strong>Core Focus:</strong> Rigorous curriculum spanning theoretical mathematics (Linear Algebra, Statistical Inference, Probability Theory) combined with core computer science (Data Structures, Algorithms, GPU Computing, OS, DBMS).</li>
-        <li><strong>Leadership Roles:</strong> Student Placement Coordinator at Career Development Centre (CDC); Member of Fintech Club.</li>
-      </ul>
-    </div>
-  </div>
-
 </div>
-
