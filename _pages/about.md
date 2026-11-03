@@ -13,7 +13,7 @@ I am pursuing an **Integrated Master of Technology (M.Tech) in Mathematics and C
 
 My work connects theoretical mathematics with software engineering, focusing on machine learning, computer vision, retrieval-augmented generation (RAG), and scalable architectures.
 
-Currently, I am a **Lead Software Engineer Intern** at **Apparent Energy Solutions Pvt. Ltd.**, leading computer vision and spatial modeling pipelines to map India's high-voltage electrical grid infrastructure from satellite and street imagery.
+Most recently, I served as a **Lead Software Engineer Intern** at **Apparent Energy Solutions Pvt. Ltd.** (January 2026 – September 2026), leading computer vision and spatial modeling pipelines to map India's high-voltage electrical grid infrastructure from satellite and street imagery.
 
 ---
 
@@ -27,7 +27,7 @@ Currently, I am a **Lead Software Engineer Intern** at **Apparent Energy Solutio
 
 ## News and Updates
 
-* **January 2026 – Present**: Joined **Apparent Energy Solutions Pvt. Ltd.** as Lead Software Engineer Intern (Remote).
+* **January 2026 – September 2026**: Lead Software Engineer Intern at **Apparent Energy Solutions Pvt. Ltd.** (Remote).
 * **August 2025 – December 2025**: Completed Software Engineering Internship at **Aeroqube Inc.**, building clinical AI workflows with Med Gemma 27B, MED-SAM 2, and AWS SageMaker.
 * **July 2025**: Generative AI Intern at **Technod8 Innovations (Tecnod8.ai)**, developing YOLOv10 multilingual document layout models for the NCIIPC Startup India AI Grand Challenge.
 * **2025**: Secured a top 1% finish (Rank 80 out of 8,000+ teams) in the **Shell.ai Hackathon Fuel Blend AI Challenge**.

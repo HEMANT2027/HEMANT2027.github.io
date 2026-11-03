@@ -37,7 +37,7 @@ redirect_from:
 
 ## Professional Experience
 
-* **Apparent Energy Solutions Pvt. Ltd.** *(Jan 2026 – Present)*
+* **Apparent Energy Solutions Pvt. Ltd.** *(Jan 2026 – Sept 2026)*
   * **Role:** Lead Software Engineer Intern (Remote)
   * Spearheading digital twin creation for India's electrical transmission grid using satellite feeds and Google Street View.
   * Fine-tuned **YOLOv11** for transmission pole identification and created wire segmentation pipelines.

@@ -125,7 +125,7 @@ redirect_from:
       <h3 class="experience-title">Lead Software Engineer Intern</h3>
       <div class="experience-company">Apparent Energy Solutions Pvt. Ltd.</div>
       <div class="experience-meta">
-        <span class="experience-badge">January 2026 – Present</span>
+        <span class="experience-badge">January 2026 – September 2026</span>
         <span>Remote</span>
       </div>
       <ul class="experience-bullets">
