@@ -1,6 +1,6 @@
 ---
 title: "AI Powered Email Helpdesk (IntelliDesk)"
-excerpt: "A sophisticated intelligent desk application leveraging AI to automate email routing, triage customer inquiries, and draft contextual responses with high reliability.<br/><br/>**Tech Stack:** React, FastAPI, LLM Integration, Tailwind CSS, Render<br/><a href='https://agglomeration-intellideskai-frontend.onrender.com/login' target='_blank' class='btn btn--info'><i class='fas fa-external-link-alt'></i> Live Demo</a>"
+excerpt: "An intelligent desk application that automates email routing, triages customer inquiries, and drafts contextual responses.<br/><br/>**Tech Stack:** React, FastAPI, LLM Integration, Tailwind CSS, Render<br/><a href='https://agglomeration-intellideskai-frontend.onrender.com/login' target='_blank' class='btn btn--info'><i class='fas fa-external-link-alt'></i> Live Demo</a>"
 collection: portfolio
 date: 2025-06-15
 ---
@@ -9,7 +9,7 @@ date: 2025-06-15
 
 ## Overview
 
-**IntelliDesk** is an enterprise-grade AI helpdesk application designed to eliminate ticket backlogs and automate routine customer support inquiries without sacrificing communication quality or brand voice.
+**IntelliDesk** is a web-based helpdesk application designed to organize incoming requests and assist with drafting support responses.
 
 ## Key Features
 

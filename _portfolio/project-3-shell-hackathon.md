@@ -9,11 +9,11 @@ date: 2025-09-10
 
 ## Overview
 
-The **Shell.ai Hackathon 2025** is one of the world's most competitive industrial AI competitions. The **Fuel Blend AI Challenge** tasked competitors with predicting intricate physical and chemical properties of synthetic and bio-fuel mixtures under extreme non-linear reaction conditions.
+The **Shell.ai Hackathon 2025** is an international machine learning competition. The **Fuel Blend AI Challenge** tasked participants with predicting physical and chemical properties of fuel mixtures.
 
 ## Achievements
 
-* **Rank 80 / 8,000+ Participants**: Finished in the top 1% among elite machine learning engineers and researchers across the globe.
+* **Rank 80 / 8,000+ Participants**: Finished in the top 1% out of 8,000+ competitors globally.
 * **Rigorous Cross-Validation**: Engineered out-of-fold cross-validation schemes to counter severe distribution shifts between blending regimes.
 
 ## Methodology

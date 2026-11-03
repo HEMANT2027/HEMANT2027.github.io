@@ -9,7 +9,7 @@ date: 2025-11-20
 
 ## Overview
 
-The **Health-AI Platform** is an enterprise-grade medical assistant that integrates state-of-the-art multimodal deep learning into healthcare workflows. The system minimizes clinical documentation overhead, improves patient chart review efficiency, and delivers verified context-aware medical intelligence.
+The **Health-AI Platform** is a medical assistance system that applies multimodal deep learning to clinical workflows. The system assists with document processing, patient chart review, and context-aware medical querying.
 
 ## Key Features
 
