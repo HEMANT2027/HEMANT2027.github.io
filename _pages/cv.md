@@ -12,7 +12,10 @@ redirect_from:
 
 <p>
   <a href="{{ base_path }}/files/Hemant_Pathak_Resume.pdf" class="btn btn--primary" target="_blank">
-    <i class="fa fa-download" aria-hidden="true"></i> Download Complete Resume (PDF)
+    <i class="fa fa-download" aria-hidden="true"></i> Download Resume (PDF)
+  </a>
+  <a href="{{ base_path }}/files/Hemant_Pathak_Transcript.pdf" class="btn btn--primary" target="_blank" style="margin-left: 8px;">
+    <i class="fa fa-download" aria-hidden="true"></i> Download Transcript (PDF)
   </a>
 </p>
 
