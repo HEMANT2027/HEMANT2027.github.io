@@ -116,22 +116,41 @@ redirect_from:
 
 <div class="experience-list">
 
-  <!-- Apparent Energy -->
+  <!-- Apparent Energy - Role 2 -->
   <div class="experience-item">
     <div class="experience-logo-box">
       <img src="{{ base_path }}/images/apparent.png" alt="Apparent Energy Logo" />
     </div>
     <div class="experience-content">
-      <h3 class="experience-title">Lead Software Engineer Intern</h3>
+      <h3 class="experience-title">Software Engineer Intern — Agentic MCP & Retrieval Systems</h3>
       <div class="experience-company">Apparent Energy Solutions Pvt. Ltd.</div>
       <div class="experience-meta">
-        <span class="experience-badge">January 2026 – September 2026</span>
+        <span class="experience-badge">April 2026 – September 2026</span>
         <span>Remote</span>
       </div>
       <ul class="experience-bullets">
-        <li><strong>Electrical Grid Digital Twin:</strong> Leading the automated mapping and reconstruction of India's electrical transmission infrastructure by integrating computer vision techniques with high-resolution satellite imagery and Google Street View.</li>
-        <li><strong>Object Detection and Segmentation:</strong> Trained a custom <strong>YOLOv11</strong> model to detect distribution poles from aerial imagery, and implemented hybrid segmentation-detection pipelines to identify overhead wires.</li>
-        <li><strong>Spatial and Topological Analysis:</strong> Modeled pole-to-pole connectivity and transmission corridors using graph algorithms to establish a digital twin of nationwide grid topology.</li>
+        <li><strong>Agentic MCP Infrastructure:</strong> Architected and deployed a production FastMCP server integrating 16+ autonomous tools, enabling multi-step agentic workflows and cutting token overhead by approximately 40% through one-shot query bundling.</li>
+        <li><strong>Deterministic RAG Retrieval:</strong> Engineered a schema-aware database retrieval pipeline (<code>describe_table</code> &rarr; <code>query_database</code>) featuring deterministic fallback paths, 30s timeout guards, and a 48-case test suite to eliminate SQL hallucinations.</li>
+        <li><strong>LLM Evaluations & Benchmarking:</strong> Designed rigorous evaluation frameworks benchmarked against ground-truth database states to systematically track prompt stability, tool selection accuracy, and contextual grounding across multi-step execution traces.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Apparent Energy - Role 1 -->
+  <div class="experience-item">
+    <div class="experience-logo-box">
+      <img src="{{ base_path }}/images/apparent.png" alt="Apparent Energy Logo" />
+    </div>
+    <div class="experience-content">
+      <h3 class="experience-title">Software Engineer Intern — AI & Computer Vision</h3>
+      <div class="experience-company">Apparent Energy Solutions Pvt. Ltd.</div>
+      <div class="experience-meta">
+        <span class="experience-badge">January 2026 – March 2026</span>
+        <span>Remote</span>
+      </div>
+      <ul class="experience-bullets">
+        <li><strong>High-Throughput Vision Pipelines:</strong> Orchestrated computer vision pipelines ingesting Google Street View and multi-spectral satellite imagery using a TensorRT-optimized <strong>YOLOv11</strong> model for transmission pole detection and hybrid wire segmentation.</li>
+        <li><strong>Geospatial Topology Modeling:</strong> Formulated graph-theoretic network algorithms with GeoPandas and PostGIS to model pole-to-pole connectivity, constructing a geospatial digital twin of India's electrical transmission topology.</li>
       </ul>
     </div>
   </div>

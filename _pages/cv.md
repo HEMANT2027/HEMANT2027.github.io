@@ -40,11 +40,16 @@ redirect_from:
 
 ## Professional Experience
 
-* **Apparent Energy Solutions Pvt. Ltd.** *(Jan 2026 – Sept 2026)*
-  * **Role:** Lead Software Engineer Intern (Remote)
-  * Spearheading digital twin creation for India's electrical transmission grid using satellite feeds and Google Street View.
-  * Fine-tuned **YOLOv11** for transmission pole identification and created wire segmentation pipelines.
-  * Conducted spatial modeling to construct graph topology for pole-to-pole connectivity.
+* **Apparent Energy Solutions Pvt. Ltd.** *(Apr 2026 – Sept 2026)*
+  * **Role:** Software Engineer Intern — Agentic MCP & Retrieval Systems (Remote)
+  * Architected and deployed a FastMCP server with 16+ tools, enabling agentic workflows and reducing token overhead by ~40% via one-shot query bundling.
+  * Engineered a schema-aware retrieval pipeline (<code>describe_table</code> &rarr; <code>query_database</code>) with fallback paths and a 48-case test suite to prevent SQL hallucinations.
+  * Implemented LLM evaluation suites tracking prompt stability, tool selection accuracy, and contextual grounding.
+
+* **Apparent Energy Solutions Pvt. Ltd.** *(Jan 2026 – Mar 2026)*
+  * **Role:** Software Engineer Intern — AI & Computer Vision (Remote)
+  * Orchestrated high-throughput CV pipelines on Google Street View and multi-spectral satellite imagery using TensorRT-optimized **YOLOv11** for pole detection and wire segmentation.
+  * Applied graph-theoretic algorithms with GeoPandas and PostGIS to construct a geospatial digital twin of electrical grid topologies.
 
 * **Aeroqube Inc.** *(Aug 2025 – Dec 2025)*
   * **Role:** Software Engineering Intern (Remote)
