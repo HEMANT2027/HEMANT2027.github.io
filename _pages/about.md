@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-I am pursuing an **Integrated Master of Technology (M.Tech) in Mathematics and Computing** at the **Indian Institute of Technology (ISM), Dhanbad** (Expected May 2028, Cumulative GPA: 8.80 / 10.00).
+I am pursuing an **Integrated Master of Technology (M.Tech) in Mathematics and Computing** at the **Indian Institute of Technology (ISM), Dhanbad** (Expected May 2028, Cumulative GPA: 8.90 / 10.00).
 
 My work connects theoretical mathematics with software engineering, focusing on machine learning, computer vision, retrieval-augmented generation (RAG), and scalable architectures.
 

@@ -20,7 +20,7 @@ redirect_from:
 
 * **Indian Institute of Technology (ISM), Dhanbad** (2023 – Expected May 2028)
   * Integrated Master of Technology in Mathematics and Computing
-  * **Current GPA: 8.80 / 10.00**
+  * **Current GPA: 8.90 / 10.00**
 * **St. Mary’s Convent School, Gajraula** (2021 – 2023)
   * Class XII (CBSE): **95.6%**
   * Class X (CBSE): **98.8%**

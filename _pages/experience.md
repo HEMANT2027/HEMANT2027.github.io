@@ -101,7 +101,7 @@ redirect_from:
         <span>Dhanbad, Jharkhand, India</span>
       </div>
       <ul class="experience-bullets">
-        <li><strong>Academic Standing:</strong> Cumulative GPA: <strong>8.80 / 10.00</strong>.</li>
+        <li><strong>Academic Standing:</strong> Cumulative GPA: <strong>8.90 / 10.00</strong>.</li>
         <li><strong>Core Focus:</strong> Rigorous curriculum spanning theoretical mathematics (Linear Algebra, Statistical Inference, Probability Theory) combined with core computer science (Data Structures, Algorithms, GPU Computing, Operating Systems, Database Management Systems).</li>
         <li><strong>Positions:</strong> Student Placement Coordinator at Career Development Centre (CDC); Member of Fintech Club.</li>
       </ul>
