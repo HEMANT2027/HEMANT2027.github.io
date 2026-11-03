@@ -17,16 +17,15 @@ redirect_from:
   margin: 20px 0 35px 0;
 }
 .skill-card {
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   padding: 16px 20px;
   background: #ffffff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 .skill-card h4 {
   margin: 0 0 10px 0;
-  color: #2b6cb0;
-  font-size: 1.1rem;
+  color: #1a73e8;
+  font-size: 1.05rem;
 }
 .skill-tags {
   display: flex;
@@ -34,9 +33,9 @@ redirect_from:
   gap: 6px;
 }
 .skill-tag {
-  background: #f7fafc;
-  border: 1px solid #e2e8f0;
-  color: #2d3748;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  color: #374151;
   font-size: 0.82rem;
   font-weight: 600;
   padding: 3px 8px;
@@ -48,17 +47,18 @@ redirect_from:
   margin: 15px 0 30px 0;
 }
 .cp-table th, .cp-table td {
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e5e7eb;
   padding: 10px 14px;
   text-align: left;
 }
 .cp-table th {
-  background-color: #f7fafc;
+  background-color: #f9fafb;
   font-weight: 700;
+  color: #111827;
 }
 </style>
 
-## 🛠️ Technical Stack
+## Technical Stack
 
 <div class="skills-grid">
 
@@ -73,7 +73,7 @@ redirect_from:
   </div>
 
   <div class="skill-card">
-    <h4>AI, ML & Vision</h4>
+    <h4>Machine Learning & Vision</h4>
     <div class="skill-tags">
       <span class="skill-tag">PyTorch</span>
       <span class="skill-tag">OpenCV</span>
@@ -87,7 +87,7 @@ redirect_from:
   </div>
 
   <div class="skill-card">
-    <h4>Data Science & Numerical</h4>
+    <h4>Data Science & Numerical Analysis</h4>
     <div class="skill-tags">
       <span class="skill-tag">NumPy</span>
       <span class="skill-tag">Pandas</span>
@@ -115,7 +115,7 @@ redirect_from:
 
 ---
 
-## 🏆 Competitive Programming
+## Competitive Programming
 
 Regular participant in competitive programming with a focus on algorithmic problem solving, graph theory, and dynamic programming:
 
@@ -152,16 +152,15 @@ Regular participant in competitive programming with a focus on algorithmic probl
 
 ---
 
-## 🎖️ Awards & Honors
+## Honors & Achievements
 
-* 🥇 **Shell.ai Hackathon 2025 (Global Fuel Blend Challenge)**: Finished **Top 1% (Rank 80 / 8,000+ competitors)** worldwide, developing an ensemble predictive regressor for complex chemical blend properties.
-* 🥈 **Algoverse Algorithmic Trading Hackathon (Runner-Up)**: Designed and backtested a statistical arbitrage pairs-trading model, outperforming 50+ competing teams.
-* 🥈 **Pitch-a-thon (Runner-Up)**: Awarded runner-up recognition out of 20+ collegiate teams for presenting a rigorous quantitative business framework.
+* **Shell.ai Hackathon 2025 (Global Fuel Blend Challenge)**: Finished **Top 1% (Rank 80 out of 8,000+ competitors)** worldwide, developing an ensemble predictive regressor for complex chemical blend properties.
+* **Algoverse Algorithmic Trading Hackathon**: Runner-Up out of 50+ competing teams, designing and backtesting a statistical arbitrage pairs-trading strategy.
+* **Pitch-a-thon**: Runner-Up out of 20+ teams for presenting a quantitative business and product framework.
 
 ---
 
-## 🤝 Leadership & Community
+## Leadership & Positions of Responsibility
 
 * **Student Placement Coordinator**: Career Development Centre (CDC), IIT (ISM) Dhanbad. Coordinating recruiter relations and interview logistics for university campus placements.
 * **Core Member**: Fintech Club, IIT (ISM) Dhanbad. Organizing quant trading workshops, algorithmic finance discussions, and hackathons.
-
