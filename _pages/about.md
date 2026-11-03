@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-I am pursuing an **Integrated Master of Technology (M.Tech) in Mathematics and Computing** at the **Indian Institute of Technology (ISM), Dhanbad** (Expected May 2028, Cumulative GPA: 8.90 / 10.00).
+I am pursuing an **Integrated Master of Technology (M.Tech) in Mathematics and Computing** at the **Indian Institute of Technology (ISM), Dhanbad** (Expected May 2028, Cumulative GPA: 8.90 / 10.00). In Summer 2027, I will be joining **Google** as a Software Engineering Intern.
 
 My work connects theoretical mathematics with software engineering, focusing on machine learning, computer vision, retrieval-augmented generation (RAG), and scalable architectures.
 
@@ -27,6 +27,7 @@ Most recently, I served as a **Lead Software Engineer Intern** at **Apparent Ene
 
 ## News and Updates
 
+* **Summer 2027**: Upcoming Software Engineering Intern at **Google**.
 * **January 2026 – September 2026**: Lead Software Engineer Intern at **Apparent Energy Solutions Pvt. Ltd.** (Remote).
 * **August 2025 – December 2025**: Completed Software Engineering Internship at **Aeroqube Inc.**, building clinical AI workflows with Med Gemma 27B, MED-SAM 2, and AWS SageMaker.
 * **July 2025**: Generative AI Intern at **Technod8 Innovations (Tecnod8.ai)**, developing YOLOv10 multilingual document layout models for the NCIIPC Startup India AI Grand Challenge.
