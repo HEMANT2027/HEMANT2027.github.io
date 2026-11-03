@@ -1,14 +1,19 @@
 ---
 layout: archive
-title: "Portfolio"
-permalink: /portfolio/
+title: "Projects"
+permalink: /projects/
 author_profile: true
+redirect_from:
+  - /portfolio/
+  - /portfolio.html
 ---
 
 {% include base_path %}
 
+Featured software engineering, machine learning, and mathematical modeling projects developed across internships, hackathons, and research endeavors.
 
-{% for post in site.portfolio %}
+---
+
+{% for post in site.portfolio reversed %}
   {% include archive-single.html %}
 {% endfor %}
-
